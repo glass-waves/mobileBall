@@ -39,7 +39,7 @@ class Ball {
 		
 		this.size = random(30, 100);
 		this.radius = this.size/2;
-		this.location = createVector(width/2,height/2);
+		this.location = createVector(0,0);
 		this.velocity = createVector(0,0);
 		
 
@@ -69,7 +69,7 @@ class Ball {
 
 		//var zacc = map(ztip, -180, 180, -1, 1);
 		var xacc = map(xtip, -180, 180, 1, -1);
-		var yacc = map(ytip, -90, 90, 2, -2);
+		var yacc = map(ytip, -90, 90, 1, -1);
 
 		this.acceleration = createVector(xacc,yacc);
 
