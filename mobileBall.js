@@ -39,7 +39,7 @@ class Ball {
 		
 		this.size = random(30, 100);
 		this.radius = this.size/2;
-		this.location = createVector(windowWidth/2,windowHeight/2);
+		this.location = createVector(0,0);
 		this.velocity = createVector(0,0);
 		
 
