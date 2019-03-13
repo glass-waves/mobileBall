@@ -88,7 +88,7 @@ class Ball {
            this.velocity.y *= -.1;
 			}
 
-		this.acceleration.mult(0);
+		//this.acceleration.mult(0);
 
 
 	}
