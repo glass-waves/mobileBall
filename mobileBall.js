@@ -81,11 +81,11 @@ class Ball {
 
  		// if head hits the side of canvas, reverse velocity
 		if(this.location.x < 0 + this.radius || this.location.x > windowWidth - this.radius) {
-           this.velocity.x *= -.1;
+           this.velocity.x *= -1;
 			}
 
 		if(this.location.y < 0 + this.radius || this.location.y > windowHeight - this.radius) {
-           this.velocity.y *= -.1;
+           this.velocity.y *= -1;
 			}
 
 		//this.acceleration.mult(0);
