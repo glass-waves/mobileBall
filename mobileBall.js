@@ -6,7 +6,7 @@ var balls = [];
 
 function setup(){
 
- createCanvas(windowWidth, windowHeight, WEBGL);
+ createCanvas(displayWidth, displayHeight, WEBGL);
 
 for (var i = 0; i < numberOfBalls; i++) {
 		balls [i] = new Ball(); 
@@ -50,7 +50,8 @@ class Ball {
 	display() {
 
 		fill(0);
-		translate(-windowWidth/2, -windowHeight/2);
+
+		//translate(-windowWidth/2, -windowHeight/2);
 
 		ellipse(this.location.x, this.location.y, this.size, this.size);
 		
