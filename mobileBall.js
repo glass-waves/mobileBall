@@ -50,6 +50,7 @@ class Ball {
 	display() {
 
 		fill(0);
+		translate(-windowWidth/2, -windowHeight/2);
 
 		ellipse(this.location.x, this.location.y, this.size, this.size);
 		
