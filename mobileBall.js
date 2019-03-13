@@ -6,11 +6,15 @@ var balls = [];
 
 function setup(){
 
+
  createCanvas(displayWidth, displayHeight, WEBGL);
+
+ fullscreen();
 
 for (var i = 0; i < numberOfBalls; i++) {
 		balls [i] = new Ball(); 
 	}
+
 
 }
 
