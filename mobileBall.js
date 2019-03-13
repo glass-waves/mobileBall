@@ -39,7 +39,7 @@ class Ball {
 		
 		this.size = random(30, 100);
 		this.radius = this.size/2;
-		this.location = createVector(0,0);
+		this.location = createVector(displayWidth/2,displayHeight/2);
 		this.velocity = createVector(0,0);
 		
 
@@ -82,11 +82,11 @@ class Ball {
 
 
  		// if head hits the side of canvas, reverse velocity
-		if(this.location.x < 0 + this.radius || this.location.x > windowWidth - this.radius) {
+		if(this.location.x < 0 + this.radius || this.location.x > displayWidth - this.radius) {
            this.velocity.x *= -1;
 			}
 
-		if(this.location.y < 0 + this.radius || this.location.y > windowHeight - this.radius) {
+		if(this.location.y < 0 + this.radius || this.location.y > displayHeight - this.radius) {
            this.velocity.y *= -1;
 			}
 
