@@ -6,9 +6,9 @@ var balls = [];
 
 function setup(){
 
-translate(-displayWidth/2, -displayHeight/2);
+//translate(-displayWidth/2, -displayHeight/2);
 
- createCanvas(displayWidth, displayHeight, WEBGL);
+ createCanvas(displayWidth, displayHeight);
 
  fullscreen();
 
