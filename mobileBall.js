@@ -8,7 +8,7 @@ function setup(){
 
 //translate(-displayWidth/2, -displayHeight/2);
 
- createCanvas(displayWidth, displayHeight);
+ createCanvas(window.innerWidth, window.innerHeight);
 
  fullscreen();
 
@@ -88,11 +88,13 @@ class Ball {
 
  		// if head hits the side of canvas, reverse velocity
 		if(this.location.x < -displayWidth/2 + this.radius || this.location.x > displayWidth/2 - this.radius) {
+			this.acceleration.x *= -.1;
            this.velocity.x *= -.5;
 			}
 
 		if(this.location.y < -displayHeight/2 + this.radius || this.location.y > displayHeight/2 - this.radius) {
            this.velocity.y *= -.5;
+           this.acceleration.y *= -.1;
 			}
 
 		//this.acceleration.mult(0);
