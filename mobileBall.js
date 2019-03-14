@@ -117,7 +117,7 @@ class Ball {
 			this.velocity.x = -1
 		}
 
-\		
+		
 		if(this.location.y <= 5) {
 			topEdge = true;
 			}else{topEdge = false};
@@ -127,7 +127,7 @@ class Ball {
 		if(topEdge){
 			this.velocity.y = 1
 		}
-\		
+		
 		if(this.location.y >= window.innerHeight) {
 			bottomEdge = true;
 			}else{bottomEdge = false;
