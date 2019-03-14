@@ -86,20 +86,62 @@ class Ball {
 		// add velocity to location vector
 		this.location.add(this.velocity);
 
+	}
 
- 		// if head hits the side of canvas, reverse velocity
-		if(this.location.x < 0 + this.radius || this.location.x > width - this.radius) {
-			this.acceleration.x *= -.1;
-           this.velocity.x *= -.5;
-			}
 
-		if(this.location.y < 0+ this.radius || this.location.y > height - this.radius) {
-           this.velocity.y *= -.5;
-           this.acceleration.y *= -.1;
-			}
+	edges(){
+		var leftEdge = false;
+		var rightEdge = false;
+		var topEdge = false;
+		var bottomEdge = false;
 
+
+
+		if(this.location.x <= 5) {
+			leftEdge = true;
+			}else{leftEdge = false};
+
+		
+
+		if(leftEdge){
+			this.velocity.x = 1
+		}
+
+
+		if(this.location.x >= window.innerWidth-5) {
+			rightEdge = true;
+			}else{rightEdge = false};
+		
+
+		if(rightEdge){
+			this.velocity.x = -1
+		}
+
+\		
+		if(this.location.y <= 5) {
+			topEdge = true;
+			}else{topEdge = false};
+
+		
+
+		if(topEdge){
+			this.velocity.y = 1
+		}
+\		
+		if(this.location.y >= window.innerHeight) {
+			bottomEdge = true;
+			}else{bottomEdge = false;
+
+		}
+
+		if(bottomEdge){
+			this.velocity.y = -1
+		}
+\
+\
 		//this.acceleration.mult(0);
 
 
-	}
+	
+}
 }
