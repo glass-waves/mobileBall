@@ -26,7 +26,7 @@ for (var i = 0; i < numberOfBalls; i++) {
 
 function draw(){
 
-	background(255);
+	background(0);
    
    for (var i = 0; i < numberOfBalls; i++) {
 
