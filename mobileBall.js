@@ -137,8 +137,7 @@ class Ball {
 		if(bottomEdge){
 			this.velocity.y = -1
 		}
-\
-\
+
 		//this.acceleration.mult(0);
 
 
