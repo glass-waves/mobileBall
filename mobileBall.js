@@ -2,7 +2,7 @@
 var numberOfBalls = 1;
 var balls = [];
 var width = window.innerWidth;
-var height = windowHeight;
+var height = window.innerHeight;
 
 
 function setup(){
