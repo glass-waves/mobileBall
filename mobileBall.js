@@ -55,7 +55,7 @@ class Ball {
 
 	display() {
 
-		fill(0);
+		fill(255);
 
 		//translate(-windowWidth/2, -windowHeight/2);
 
