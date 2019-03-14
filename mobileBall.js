@@ -1,7 +1,8 @@
 
 var numberOfBalls = 1;
 var balls = [];
-
+var width = window.innerWidth;
+var height = windowHeight;
 
 
 function setup(){
@@ -44,7 +45,7 @@ class Ball {
 		
 		this.size = random(30, 100);
 		this.radius = this.size/2;
-		this.location = createVector(window.innerWidth/2,window.innerHeight/2);
+		this.location = createVector(200,200);
 		this.velocity = createVector(0,0);
 		
 
@@ -87,12 +88,12 @@ class Ball {
 
 
  		// if head hits the side of canvas, reverse velocity
-		if(this.location.x < -window.innerWidth/2 + this.radius || this.location.x > window.innerWidth/2 - this.radius) {
+		if(this.location.x < 0 + this.radius || this.location.x > width - this.radius) {
 			this.acceleration.x *= -.1;
            this.velocity.x *= -.5;
 			}
 
-		if(this.location.y < -window.innerHeight/2 + this.radius || this.location.y > window.innerHeight/2 - this.radius) {
+		if(this.location.y < 0+ this.radius || this.location.y > height - this.radius) {
            this.velocity.y *= -.5;
            this.acceleration.y *= -.1;
 			}
