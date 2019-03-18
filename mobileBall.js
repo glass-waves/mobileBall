@@ -35,7 +35,21 @@ for (var i = 0; i < numberOfBalls; i++) {
 		balls [i] = new Ball(); 
 	}
 
+env1 = new p5.Envelope();
+  env1.setADSR(attackTime, decayTime, susPercent, releaseTime);
+  env1.setRange(attackLevel, releaseLevel);
 
+env2= new p5.Envelope();
+  env2.setADSR(attackTime, decayTime, susPercent, releaseTime);
+  env2.setRange(attackLevel, releaseLevel);
+
+env3 = new p5.Envelope();
+  env3.setADSR(attackTime, decayTime, susPercent, releaseTime);
+  env3.setRange(attackLevel, releaseLevel);
+
+env4 = new p5.Envelope();
+  env4.setADSR(attackTime, decayTime, susPercent, releaseTime);
+  env4.setRange(attackLevel, releaseLevel);
 
 
 osc1 = new p5.Oscillator();
@@ -62,21 +76,7 @@ osc4 = new p5.Oscillator();
   osc4.freq(400);
   osc4.amp(env4);
 
-env1 = new p5.Envelope();
-  env1.setADSR(attackTime, decayTime, susPercent, releaseTime);
-  env1.setRange(attackLevel, releaseLevel);
 
-env2= new p5.Envelope();
-  env2.setADSR(attackTime, decayTime, susPercent, releaseTime);
-  env2.setRange(attackLevel, releaseLevel);
-
-env3 = new p5.Envelope();
-  env3.setADSR(attackTime, decayTime, susPercent, releaseTime);
-  env3.setRange(attackLevel, releaseLevel);
-
-env4 = new p5.Envelope();
-  env4.setADSR(attackTime, decayTime, susPercent, releaseTime);
-  env4.setRange(attackLevel, releaseLevel);
 
 
 }
