@@ -3,6 +3,22 @@ var numberOfBalls = 1;
 var balls = [];
 var xacc;
 var yacc;
+var osc1;
+var osc2;
+var osc3;
+var osc4;
+var env1;
+var env2;
+var env3
+var env4;
+var attackTime = .02;
+var decayTime = .1;
+var susPercent = .2;
+var releaseTime = 1;
+var attackLevel = 1;
+var releaseLevel = 0;
+
+
 //var width = window.innerWidth;
 //var height = window.innerHeight;
 
@@ -20,9 +36,50 @@ for (var i = 0; i < numberOfBalls; i++) {
 	}
 
 
+
+
+osc1 = new p5.Oscillator();
+ osc1.setType('sine');
+  osc1.amp(env1);
+  osc1.start();
+  osc1.freq(240);
+
+osc2 = new p5.Oscillator();
+ osc2.setType('sine');
+  osc2.amp(env2);
+  osc2.start();
+  osc2.freq(240);
+
+osc3 = new p5.Oscillator();
+ osc3.setType('sine');
+  osc3.amp(env3);
+  osc3.start();
+  osc3.freq(240);
+
+osc4 = new p5.Oscillator();
+ osc4.setType('sine');
+  osc4.amp(env4);
+  osc4.start();
+  osc4.freq(240);
+
+env1 = new p5.Envelope();
+  env1.setADSR(attackTime, decayTime, susPercent, releaseTime);
+  en1v.setRange(attackLevel, releaseLevel);
+
+env2= new p5.Envelope();
+  env2.setADSR(attackTime, decayTime, susPercent, releaseTime);
+  env2.setRange(attackLevel, releaseLevel);
+
+env3 = new p5.Envelope();
+  env3.setADSR(attackTime, decayTime, susPercent, releaseTime);
+  env3.setRange(attackLevel, releaseLevel);
+
+env4 = new p5.Envelope();
+  env4.setADSR(attackTime, decayTime, susPercent, releaseTime);
+  env4.setRange(attackLevel, releaseLevel);
+
+
 }
-
-
 
 
 
@@ -94,7 +151,7 @@ class Ball {
 
 		if(this.location.x < 0 + this.radius || this.location.x > windowWidth - this.radius) {
 			this.acceleration.x *= -.8;
-           this.velocity.x *= -.8;
+            this.velocity.x *= -.8;
 			}
 
 		if(this.location.y < 0+ this.radius || this.location.y > windowHeight - this.radius) {
@@ -102,22 +159,31 @@ class Ball {
            this.acceleration.y *= -.8;
 			}
 
-		function mouseDragged() {
-  		this.location = (mouseX, mouseY);
-  			// prevent default
-  			return false;
-}
 
 
-		//this.location.x.limit()	
+		if(this.location.x < 0 + this.radius){
+			this.acceleration.x *= -.8;
+			this.velocity.x *= -.8;
+			env1.play();
+			}
 
-		//this.acceleration.mult(0);
+		if(this.location.x > windowWidth - this.radius){
+			this.acceleration.x *= -.8;
+			this.velocity.x *= -.8;
+			env2.play();
+			}
 
-		// while(this.location.x < 5){this.velocity.x = 1}
-		// while(this.location.x > (windowWidth-5)){this.velocity.x = -1}
+		if(this.location.y < 0 + this.radius){
+			this.acceleration.x *= -.8;
+			this.velocity.x *= -.8;
+			env3.play();
+			}
 
-		// while(this.location.y < 5){this.velocity.y = 1}
-		// while(this.location.y > (windowHeight-5)){this.velocity.y = -1}
+		if(this.location.x < windowHeight + this.radius){
+			this.acceleration.x *= -.8;
+			this.velocity.x *= -.8;
+			env4.play();
+			}
 
 
 
