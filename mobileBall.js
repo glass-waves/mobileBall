@@ -87,23 +87,23 @@ class Ball {
 		this.location.add(this.velocity);
 
 
-		// if(this.location.x < 0 + this.radius || this.location.x > windowWidth - this.radius) {
-		// 	this.acceleration.x *= -.1;
-  //          this.velocity.x *= -.5;
-		// 	}
+		if(this.location.x < 0 + this.radius || this.location.x > windowWidth - this.radius) {
+			this.acceleration.x *= -.1;
+           this.velocity.x *= -.5;
+			}
 
-		// if(this.location.y < 0+ this.radius || this.location.y > windowHeight - this.radius) {
-  //          this.velocity.y *= -.5;
-  //          this.acceleration.y *= -.1;
-		// 	}
+		if(this.location.y < 0+ this.radius || this.location.y > windowHeight - this.radius) {
+           this.velocity.y *= -.5;
+           this.acceleration.y *= -.1;
+			}
 
 		//this.acceleration.mult(0);
 
-		while(this.location.x < 5){this.velocity.x = 1}
-		while(this.location.x > (windowWidth-5)){this.velocity.x = -1}
+		// while(this.location.x < 5){this.velocity.x = 1}
+		// while(this.location.x > (windowWidth-5)){this.velocity.x = -1}
 
-		while(this.location.y < 5){this.velocity.y = 1}
-		while(this.location.y > (windowHeight-5)){this.velocity.y = -1}
+		// while(this.location.y < 5){this.velocity.y = 1}
+		// while(this.location.y > (windowHeight-5)){this.velocity.y = -1}
 
 
 
