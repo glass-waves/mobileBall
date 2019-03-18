@@ -233,8 +233,9 @@ class Ball {
 			env2.play();	
 			length = random(250);	
 			attackTime = map(length, 0, 250, 0, 3);
-			console.log(attackTime);
+			
 			cutoff2 = random(200, 5000);
+			console.log('cutoff2 =' cutoff2);
 		}
 		if(this.location.y <= this.radius){
 			env3.play();	
