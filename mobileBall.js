@@ -190,9 +190,22 @@ class Ball {
 			this.ytip = 0;
 			this.acceleration.y *= -1;
 			this.velocity.y *= -1;
-			while(this.location.y > windowHeight-this.radius)
+			//while(this.location.y > windowHeight-this.radius)
 
 			}
+
+
+
+	}
+
+	playSound() {
+
+		if(this.location.x == this.radius){
+			env1.play();
+			this.location = random2D();
+		}
+
+
 
 
 
