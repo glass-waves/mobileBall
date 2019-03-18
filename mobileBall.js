@@ -82,7 +82,7 @@ class Ball {
 		var yacc = map(ytip, -90, 90, 1, -1);
 
 
-		this.acceleration = createVector(xacc,yacc);
+		this.acceleration = createVector(yacc,xacc);
 
 
 		//add acceleration to velocity vector
