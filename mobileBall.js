@@ -168,29 +168,29 @@ class Ball {
 
 		if(this.location.x < 0 + this.radius){
 			xtip = 0;
-			this.acceleration.x *= -.1;
-			this.velocity.x *= -.1;
+			this.acceleration.x *= -1;
+			this.velocity.x *= -1;
 			env1.play();
 			}
 
 		if(this.location.x > windowWidth - this.radius){
 			xtip = 0;
-			this.acceleration.x *= -.1;
-			this.velocity.x *= -.1;
+			this.acceleration.x *= -1;
+			this.velocity.x *= -1;
 			env2.play();
 			}
 
 		if(this.location.y < 0 + this.radius){
 			ytip = 0;
-			this.acceleration.y *= -.1;
-			this.velocity.y *= -.1;
+			this.acceleration.y *= -1;
+			this.velocity.y *= -1;
 			env3.play();
 			}
 
 		if(this.location.y > windowHeight - this.radius){
 			ytip = 0;
-			this.acceleration.y *= -.1;
-			this.velocity.y *= -.1;
+			this.acceleration.y *= -1;
+			this.velocity.y *= -1;
 			env4.play();
 			}
 
