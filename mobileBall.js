@@ -70,13 +70,14 @@ class Ball {
 
 
 		// //var ztip = rotationZ;
-		// var xtip = rotationX;
-		// var ytip = rotationY;
+		 var xtip = rotationX;
+		 var ytip = rotationY;
 
 
 		//var zacc = map(ztip, -180, 180, -1, 1);
-		var xacc = map(rotationX, -90, 90, -1, 1);
-		var yacc = map(rotationY, -90, 90, -1, 1);
+		var xacc = map(xtip, -180, 180, 1, -1);
+		var yacc = map(ytip, -90, 90, 1, -1);
+
 
 		this.acceleration = createVector(xacc,yacc);
 
