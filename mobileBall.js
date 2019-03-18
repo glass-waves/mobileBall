@@ -174,14 +174,14 @@ class Ball {
 			}
 
 		if(this.location.y < 0 + this.radius){
-			this.acceleration.x *= -.8;
-			this.velocity.x *= -.8;
+			this.acceleration.y *= -.8;
+			this.velocity.y *= -.8;
 			env3.play();
 			}
 
-		if(this.location.x < windowHeight + this.radius){
-			this.acceleration.x *= -.8;
-			this.velocity.x *= -.8;
+		if(this.location.y < windowHeight + this.radius){
+			this.acceleration.y *= -.8;
+			this.velocity.y *= -.8;
 			env4.play();
 			}
 
