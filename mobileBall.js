@@ -154,18 +154,6 @@ class Ball {
 		this.location.add(this.velocity);
 
 
-		// if(this.location.x < 0 + this.radius || this.location.x > windowWidth - this.radius) {
-		// 	this.acceleration.x *= -.8;
-  //           this.velocity.x *= -.8;
-		// 	}
-
-		// if(this.location.y < 0+ this.radius || this.location.y > windowHeight - this.radius) {
-  //          this.velocity.y *= -.8;
-  //          this.acceleration.y *= -.8;
-		// 	}
-
-
-
 		if(this.location.x < 0 + this.radius){
 			this.xtip = 0;
 			this.acceleration.x *= -1;
@@ -193,10 +181,7 @@ class Ball {
 			//while(this.location.y > windowHeight-this.radius)
 
 			}
-
-
-
-	}
+		}
 
 	playSound() {
 
@@ -209,5 +194,5 @@ class Ball {
 
 
 
-	}
+	
 }
