@@ -207,7 +207,7 @@ class Ball {
 	save() {
 
 		if(this.location.x < this.radius || this.location.x > windowWidth - this.radius || this.location.y < this.radius || this.location.y > windowHeight - this.radius)
-	{this.location = random2D();}
+	{this.location = p5.vector.random2D();}
 
 }
 
