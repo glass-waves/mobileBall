@@ -34,9 +34,8 @@ function draw(){
  	balls[i].update();
 
 	}
-
-	console.log(xacc);
-
+console.log('xacc'+ xacc);
+console.log('yacc' + yacc);
 }
 
 
@@ -76,8 +75,8 @@ class Ball {
 
 
 		//var zacc = map(ztip, -180, 180, -1, 1);
-		var xacc = accelerationX;
-		var yacc = accelerationY;
+		var xacc = map(rotationX, -90, 90, -1, 1);
+		var yacc = map(rotationY, -90, 90, -1, 1);
 
 		this.acceleration = createVector(xacc,yacc);
 
