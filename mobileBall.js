@@ -90,8 +90,9 @@ function draw(){
    for (var i = 0; i < numberOfBalls; i++) {
 
  	balls[i].display();
- 	balls[i].update();
  	balls[i].playSound();
+ 	balls[i].update();
+ 	balls[i].save();
 
 	}
 
@@ -155,27 +156,27 @@ class Ball {
 		this.location.add(this.velocity);
 
 
-		if(this.location.x < 0 + this.radius){
+		if(this.location.x == 0 + this.radius){
 			this.xtip = 0;
 			this.acceleration.x *= -1;
 			this.velocity.x *= -1;
 			
 			}
 
-		if(this.location.x > windowWidth - this.radius){
+		if(this.location.x == windowWidth - this.radius){
 			this.xtip = 0;
 			this.acceleration.x *= -1;
 			this.velocity.x *= -1;
 						}
 
-		if(this.location.y < 0 + this.radius){
+		if(this.location.y == 0 + this.radius){
 			this.ytip = 0;
 			this.acceleration.y *= -1;
 			this.velocity.y *= -1;
 			
 			}
 
-		if(this.location.y > windowHeight - this.radius){
+		if(this.location.y == windowHeight - this.radius){
 			this.ytip = 0;
 			this.acceleration.y *= -1;
 			this.velocity.y *= -1;
@@ -187,11 +188,26 @@ class Ball {
 	playSound() {
 
 		if(this.location.x == this.radius){
-			env1.play();
-			this.location = random2D();
+			env1.play();	
+		}
+		if(this.location.x == windowWidth - this.radius){
+			env2.play();	
+		}
+		if(this.location.y == this.radius){
+			env3.play();	
+		}
+		if(this.location.y == windowHeight - this.radius){
+			env4.play();	
 		}
 
 
+
+}
+
+	save() {
+
+		if(this.location.x < this.radius || this.location.x > windowWidth - this.radius || this.location.y < this.radius || this.location.y > windowHeight - this.radius)
+	{this.location = random2D();}
 
 }
 
