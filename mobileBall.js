@@ -91,6 +91,7 @@ function draw(){
 
  	balls[i].display();
  	balls[i].update();
+ 	balls[i].playSound();
 
 	}
 
