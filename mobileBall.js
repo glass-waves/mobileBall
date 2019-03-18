@@ -243,7 +243,7 @@ class Ball {
 			attackTime = map(length, 0, 250, 0, 3);
 			
 			cutoff2 = random(200, 400);
-			console.log( cutoff2);
+			console.log( resonance);
 		}
 		if(this.location.y <= this.radius){
 			env3.play();	
