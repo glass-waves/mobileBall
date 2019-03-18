@@ -1,5 +1,5 @@
 
-var numberOfBalls = 1;
+var numberOfBalls = 10;
 var balls = [];
 var xacc;
 var yacc;
