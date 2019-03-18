@@ -92,7 +92,7 @@ function draw(){
  	balls[i].display();
  	balls[i].playSound();
  	balls[i].update();
- 	balls[i].save();
+ 	//balls[i].save();
 
 	}
 
