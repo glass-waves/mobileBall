@@ -187,16 +187,16 @@ class Ball {
 
 	playSound() {
 
-		if(this.location.x == this.radius){
+		if(this.location.x <= this.radius){
 			env1.play();	
 		}
-		if(this.location.x == windowWidth - this.radius){
+		if(this.location.x >= windowWidth - this.radius){
 			env2.play();	
 		}
-		if(this.location.y == this.radius){
+		if(this.location.y <= this.radius){
 			env3.play();	
 		}
-		if(this.location.y == windowHeight - this.radius){
+		if(this.location.y >= windowHeight - this.radius){
 			env4.play();	
 		}
 
