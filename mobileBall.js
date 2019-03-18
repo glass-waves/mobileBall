@@ -42,19 +42,19 @@ osc1 = new p5.Oscillator();
  osc1.setType('sine');
   osc1.amp(env1);
   osc1.start();
-  osc1.freq(240);
+  osc1.freq(1000);
 
 osc2 = new p5.Oscillator();
  osc2.setType('sine');
   osc2.amp(env2);
   osc2.start();
-  osc2.freq(240);
+  osc2.freq(880);
 
 osc3 = new p5.Oscillator();
  osc3.setType('sine');
   osc3.amp(env3);
   osc3.start();
-  osc3.freq(240);
+  osc3.freq(440);
 
 osc4 = new p5.Oscillator();
  osc4.setType('sine');
