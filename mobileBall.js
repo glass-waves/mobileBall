@@ -192,17 +192,26 @@ class Ball {
 		if(this.location.x <= this.radius){
 			env1.play();
 			length = random(250);	
-			attackTime = map(length, 0, 250, 0, 1);
+			attackTime = map(length, 0, 250, 0, 3);
 			console.log(attackTime);
 		}
 		if(this.location.x >= windowWidth - this.radius){
 			env2.play();	
+			length = random(250);	
+			attackTime = map(length, 0, 250, 0, 3);
+			console.log(attackTime);
 		}
 		if(this.location.y <= this.radius){
 			env3.play();	
+			length = random(250);	
+			attackTime = map(length, 0, 250, 0, 3);
+			console.log(attackTime);
 		}
 		if(this.location.y >= windowHeight - this.radius){
 			env4.play();	
+			length = random(250);	
+			attackTime = map(length, 0, 250, 0, 3);
+			console.log(attackTime);
 		}
 
 
