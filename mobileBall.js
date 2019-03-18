@@ -88,13 +88,13 @@ class Ball {
 
 
 		if(this.location.x < 0 + this.radius || this.location.x > windowWidth - this.radius) {
-			this.acceleration.x *= -.1;
-           this.velocity.x *= -.5;
+			this.acceleration.x *= -1;
+           this.velocity.x *= -1;
 			}
 
 		if(this.location.y < 0+ this.radius || this.location.y > windowHeight - this.radius) {
-           this.velocity.y *= -.5;
-           this.acceleration.y *= -.1;
+           this.velocity.y *= -1;
+           this.acceleration.y *= -1;
 			}
 
 		//this.acceleration.mult(0);
