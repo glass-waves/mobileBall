@@ -1,15 +1,15 @@
 
 var numberOfBalls = 1;
 var balls = [];
-var width = window.innerWidth;
-var height = window.innerHeight;
+//var width = window.innerWidth;
+//var height = window.innerHeight;
 
 
 function setup(){
 
 //translate(-displayWidth/2, -displayHeight/2);
 
- createCanvas(window.innerWidth, window.innerHeight);
+ createCanvas(windowWidth, windowHeight);
 
  fullscreen();
 
@@ -86,61 +86,19 @@ class Ball {
 		// add velocity to location vector
 		this.location.add(this.velocity);
 
-	}
 
+		if(this.location.x < 0 + this.radius || this.location.x > windowWidth - this.radius) {
+			this.acceleration.x *= -.1;
+           this.velocity.x *= -.5;
+			}
 
-	edges(){
-		var leftEdge = false;
-		var rightEdge = false;
-		var topEdge = false;
-		var bottomEdge = false;
-
-
-
-		if(this.location.x <= 5) {
-			leftEdge = true;
-			}else{leftEdge = false};
-
-		
-
-		if(leftEdge){
-			this.velocity.x = 1
-		}
-
-
-		if(this.location.x >= window.innerWidth-5) {
-			rightEdge = true;
-			}else{rightEdge = false};
-		
-
-		if(rightEdge){
-			this.velocity.x = -1
-		}
-
-		
-		if(this.location.y <= 5) {
-			topEdge = true;
-			}else{topEdge = false};
-
-		
-
-		if(topEdge){
-			this.velocity.y = 1
-		}
-		
-		if(this.location.y >= window.innerHeight) {
-			bottomEdge = true;
-			}else{bottomEdge = false;
-
-		}
-
-		if(bottomEdge){
-			this.velocity.y = -1
-		}
+		if(this.location.y < 0+ this.radius || this.location.y > windowHeight - this.radius) {
+           this.velocity.y *= -.5;
+           this.acceleration.y *= -.1;
+			}
 
 		//this.acceleration.mult(0);
 
 
-	
-}
+	}
 }
