@@ -26,7 +26,7 @@ var releaseTime = .2;
 var attackLevel = .5;
 var releaseLevel = 0;
 var length;
-var resonance = mouseX*5;
+var resonance = mouseX*20;
 
 
 
@@ -64,19 +64,19 @@ env4 = new p5.Envelope();
 
 filter1 = new p5.LowPass();
 filter1.freq(cutoff1);
-filter1.res(resonance);
+
 
 filter2 = new p5.LowPass();
 filter2.freq(cutoff2);
-filter2.res(20);
+
 
 filter3 = new p5.LowPass();
 filter3.freq(cutoff3);
-filter3.res(20);
+
 
 filter4 = new p5.LowPass();
 filter4.freq(cutoff4);
-filter4.res(20);
+
 
 osc1 = new p5.Oscillator();
  osc1.setType('square');
@@ -120,6 +120,11 @@ osc4 = new p5.Oscillator();
 function draw(){
 
 	background(0);
+
+	filter1.res(resonance);
+	filter2.res(resonance);
+	filter3.res(resonance);
+	filter4.res(resonance);
    
    for (var i = 0; i < numberOfBalls; i++) {
 
