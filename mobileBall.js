@@ -17,6 +17,8 @@ var susPercent = 0;
 var releaseTime = .2;
 var attackLevel = .5;
 var releaseLevel = 0;
+var length;
+
 
 
 //var width = window.innerWidth;
@@ -53,19 +55,19 @@ env4 = new p5.Envelope();
 
 
 osc1 = new p5.Oscillator();
- osc1.setType('tri');
+ osc1.setType('triangle');
   osc1.start();
   osc1.freq(116.54);
   osc1.amp(env1);
 
 osc2 = new p5.Oscillator();
- osc2.setType('sawtooth');
+ osc2.setType('triangle');
   osc2.start();
   osc2.freq(146.83);
   osc2.amp(env2);
 
 osc3 = new p5.Oscillator();
- osc3.setType('sine');
+ osc3.setType('triangle');
   osc3.start();
   osc3.freq(349.23);
   osc3.amp(env3);
@@ -187,7 +189,7 @@ class Ball {
 
 	playSound() {
 
-		var length;
+		
 
 		if(this.location.x <= this.radius){
 			env1.play();
