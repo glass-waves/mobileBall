@@ -1,6 +1,8 @@
 
 var numberOfBalls = 1;
 var balls = [];
+var xacc;
+var yacc;
 //var width = window.innerWidth;
 //var height = window.innerHeight;
 
