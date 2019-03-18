@@ -26,7 +26,6 @@ var releaseTime = .2;
 var attackLevel = .5;
 var releaseLevel = 0;
 var length;
-var resonance = mouseX*20;
 
 
 
@@ -64,19 +63,19 @@ env4 = new p5.Envelope();
 
 filter1 = new p5.LowPass();
 filter1.freq(cutoff1);
-filter1.res(resonance);
+filter1.res(20);
 
 filter2 = new p5.LowPass();
 filter2.freq(cutoff2);
-filter2.res(resonance);
+filter2.res(20);
 
 filter3 = new p5.LowPass();
 filter3.freq(cutoff3);
-filter3.res(resonance);
+filter3.res(20);
 
 filter4 = new p5.LowPass();
 filter4.freq(cutoff4);
-filter4.res(resonance);
+filter4.res(20);
 
 osc1 = new p5.Oscillator();
  osc1.setType('square');
@@ -228,14 +227,14 @@ class Ball {
 			length = random(250);	
 			attackTime = map(length, 0, 250, 0, 3);
 			//console.log(attackTime);
-			cutoff1 = random(200, 400);
+			cutoff1 = random(200, 5000);
 		}
 		if(this.location.x >= windowWidth - this.radius){
 			env2.play();	
 			length = random(250);	
 			attackTime = map(length, 0, 250, 0, 3);
 			
-			cutoff2 = random(200, 400);
+			cutoff2 = random(200, 5000);
 			console.log( cutoff2);
 		}
 		if(this.location.y <= this.radius){
@@ -243,14 +242,14 @@ class Ball {
 			length = random(250);	
 			attackTime = map(length, 0, 250, 0, 3);
 			//console.log(attackTime);
-			cutoff3 = random(200, 400);
+			cutoff3 = random(200, 5000);
 		}
 		if(this.location.y >= windowHeight - this.radius){
 			env4.play();	
 			length = random(250);	
 			attackTime = map(length, 0, 250, 0, 3);
 			//console.log(attackTime);
-			cutoff4 = random(200, 400);
+			cutoff4 = random(200, 5000);
 		}
 
 
