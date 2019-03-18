@@ -140,7 +140,7 @@ function draw(){
 
 }
 
-function mousePressed() {
+function touchStarted() {
 
   getAudioContext().resume()
 
@@ -265,12 +265,12 @@ class Ball {
 
 }
 
-	save() {
+// 	save() {
 
-		if(this.location.x < this.radius || this.location.x > windowWidth - this.radius || this.location.y < this.radius || this.location.y > windowHeight - this.radius)
-	{this.location = p5.Vector.random2D();}
+// 		if(this.location.x < this.radius || this.location.x > windowWidth - this.radius || this.location.y < this.radius || this.location.y > windowHeight - this.radius)
+// 	{this.location = p5.Vector.random2D();}
 
-}
+// }
 
 	
 }
