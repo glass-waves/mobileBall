@@ -63,22 +63,22 @@ env4 = new p5.Envelope();
 
 filter1 = new p5.LowPass();
 filter1.freq(cutoff1);
-filter1.res(20);
+filter1.res(1000);
 
 filter2 = new p5.LowPass();
 filter2.freq(cutoff2);
-filter2.res(20);
+filter2.res(1000);
 
 filter3 = new p5.LowPass();
 filter3.freq(cutoff3);
-filter3.res(20);
+filter3.res(1000);
 
 filter4 = new p5.LowPass();
 filter4.freq(cutoff4);
-filter4.res(20);
+filter4.res(1000);
 
 osc1 = new p5.Oscillator();
- osc1.setType('triangle');
+ osc1.setType('square');
   osc1.disconnect();
   osc1.connect(filter1);
   osc1.start();
@@ -86,7 +86,7 @@ osc1 = new p5.Oscillator();
   osc1.amp(env1);
 
 osc2 = new p5.Oscillator();
- osc2.setType('triangle');
+ osc2.setType('square');
  osc2.disconnect();
   osc2.connect(filter2);
   osc2.start();
@@ -94,7 +94,7 @@ osc2 = new p5.Oscillator();
   osc2.amp(env2);
 
 osc3 = new p5.Oscillator();
- osc3.setType('triangle');
+ osc3.setType('square');
  osc3.disconnect();
   osc3.connect(filter3);
   osc3.start();
@@ -102,7 +102,7 @@ osc3 = new p5.Oscillator();
   osc3.amp(env3);
 
 osc4 = new p5.Oscillator();
- osc4.setType('triangle');
+ osc4.setType('square');
  osc4.disconnect();
   osc4.connect(filter4);
   osc4.start();
@@ -227,14 +227,14 @@ class Ball {
 			length = random(250);	
 			attackTime = map(length, 0, 250, 0, 3);
 			//console.log(attackTime);
-			cutoff1 = random(200, 5000);
+			cutoff1 = random(200, 400);
 		}
 		if(this.location.x >= windowWidth - this.radius){
 			env2.play();	
 			length = random(250);	
 			attackTime = map(length, 0, 250, 0, 3);
 			
-			cutoff2 = random(200, 5000);
+			cutoff2 = random(200, 400);
 			console.log( cutoff2);
 		}
 		if(this.location.y <= this.radius){
@@ -242,14 +242,14 @@ class Ball {
 			length = random(250);	
 			attackTime = map(length, 0, 250, 0, 3);
 			//console.log(attackTime);
-			cutoff3 = random(200, 5000);
+			cutoff3 = random(200, 400);
 		}
 		if(this.location.y >= windowHeight - this.radius){
 			env4.play();	
 			length = random(250);	
 			attackTime = map(length, 0, 250, 0, 3);
 			//console.log(attackTime);
-			cutoff4 = random(200, 5000);
+			cutoff4 = random(200, 400);
 		}
 
 
