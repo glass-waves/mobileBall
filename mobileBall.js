@@ -158,27 +158,27 @@ class Ball {
 
 		if(this.location.x <= 0 + this.radius){
 			this.xtip = 0;
-			this.acceleration.x *= -1;
+			this.acceleration.x = this.acceleration * -2;
 			this.velocity.x *= -1;
 			
 			}
 
 		if(this.location.x >= windowWidth - this.radius){
 			this.xtip = 0;
-			this.acceleration.x *= -1;
+			this.acceleration.x *= -2;
 			this.velocity.x *= -1;
 						}
 
 		if(this.location.y <= 0 + this.radius){
 			this.ytip = 0;
-			this.acceleration.y *= -1;
+			this.acceleration.y *= -2;
 			this.velocity.y *= -1;
 			
 			}
 
 		if(this.location.y >= windowHeight - this.radius){
 			this.ytip = 0;
-			this.acceleration.y *= -1;
+			this.acceleration.y *= -2;
 			this.velocity.y *= -1;
 			//while(this.location.y > windowHeight-this.radius)
 
