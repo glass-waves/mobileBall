@@ -235,14 +235,14 @@ class Ball {
 			length = random(250);	
 			attackTime = map(length, 0, 250, 0, 3);
 			//console.log(attackTime);
-			cutoff1 = random(200, 5000);
+			cutoff1 = random(200, 400);
 		}
 		if(this.location.x >= windowWidth - this.radius){
 			env2.play();	
 			length = random(250);	
 			attackTime = map(length, 0, 250, 0, 3);
 			
-			cutoff2 = random(200, 5000);
+			cutoff2 = random(200, 400);
 			console.log( cutoff2);
 		}
 		if(this.location.y <= this.radius){
@@ -250,14 +250,14 @@ class Ball {
 			length = random(250);	
 			attackTime = map(length, 0, 250, 0, 3);
 			//console.log(attackTime);
-			cutoff3 = random(200, 5000);
+			cutoff3 = random(200, 400);
 		}
 		if(this.location.y >= windowHeight - this.radius){
 			env4.play();	
 			length = random(250);	
 			attackTime = map(length, 0, 250, 0, 3);
 			//console.log(attackTime);
-			cutoff4 = random(200, 5000);
+			cutoff4 = random(200, 400);
 		}
 
 
