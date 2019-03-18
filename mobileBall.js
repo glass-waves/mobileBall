@@ -60,7 +60,7 @@ osc4 = new p5.Oscillator();
  osc4.setType('sine');
   osc4.amp(env4);
   osc4.start();
-  osc4.freq(240);
+  osc4.freq(400);
 
 env1 = new p5.Envelope();
   env1.setADSR(attackTime, decayTime, susPercent, releaseTime);
@@ -119,8 +119,7 @@ class Ball {
 		//translate(-windowWidth/2, -windowHeight/2);
 
 		ellipse(this.location.x, this.location.y, this.size, this.size);
-		console.log('xacc'+ xacc);
-		console.log('yacc' + yacc);
+		
 		
 		 
 
@@ -179,7 +178,7 @@ class Ball {
 			env3.play();
 			}
 
-		if(this.location.y > windowHeight + this.radius){
+		if(this.location.y > windowHeight - this.radius){
 			this.acceleration.y *= -.8;
 			this.velocity.y *= -.8;
 			env4.play();
