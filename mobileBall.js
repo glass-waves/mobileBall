@@ -179,7 +179,7 @@ class Ball {
 			env3.play();
 			}
 
-		if(this.location.y < windowHeight + this.radius){
+		if(this.location.y > windowHeight + this.radius){
 			this.acceleration.y *= -.8;
 			this.velocity.y *= -.8;
 			env4.play();
