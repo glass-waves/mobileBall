@@ -26,6 +26,7 @@ var releaseTime = .2;
 var attackLevel = .5;
 var releaseLevel = 0;
 var length;
+var resonance = mouseX*5;
 
 
 
@@ -63,7 +64,7 @@ env4 = new p5.Envelope();
 
 filter1 = new p5.LowPass();
 filter1.freq(cutoff1);
-filter1.res(20);
+filter1.res(resonance);
 
 filter2 = new p5.LowPass();
 filter2.freq(cutoff2);
