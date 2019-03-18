@@ -69,8 +69,8 @@ class Ball {
 
 
 		//var ztip = rotationZ;
-		var xtip = -rotationX;
-		var ytip = -rotationY;
+		var xtip = rotationX;
+		var ytip = rotationY;
 
 
 		//var zacc = map(ztip, -180, 180, -1, 1);
