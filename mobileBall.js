@@ -69,15 +69,15 @@ class Ball {
 
 
 		//var ztip = rotationZ;
-		var xtip = rotationX;
-		var ytip = rotationY;
+		var xtip = -rotationX;
+		var ytip = -rotationY;
 
 
 		//var zacc = map(ztip, -180, 180, -1, 1);
 		var xacc = map(xtip, -180, 180, 1, -1);
 		var yacc = map(ytip, -90, 90, 1, -1);
 
-		this.acceleration = createVector(-xacc,-yacc);
+		this.acceleration = createVector(xacc,yacc);
 
 
 		//add acceleration to velocity vector
@@ -88,13 +88,13 @@ class Ball {
 
 
 		if(this.location.x < 0 + this.radius || this.location.x > windowWidth - this.radius) {
-			this.acceleration.x *= -1;
-           this.velocity.x *= -1;
+			this.acceleration.x *= -.8;
+           this.velocity.x *= -.8;
 			}
 
 		if(this.location.y < 0+ this.radius || this.location.y > windowHeight - this.radius) {
-           this.velocity.y *= -1;
-           this.acceleration.y *= -1;
+           this.velocity.y *= -.8;
+           this.acceleration.y *= -.8;
 			}
 
 		//this.acceleration.mult(0);
