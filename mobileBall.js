@@ -40,27 +40,27 @@ for (var i = 0; i < numberOfBalls; i++) {
 
 osc1 = new p5.Oscillator();
  osc1.setType('sine');
-  osc1.amp(env1);
   osc1.start();
   osc1.freq(1000);
+  osc1.amp(env1);
 
 osc2 = new p5.Oscillator();
  osc2.setType('sine');
-  osc2.amp(env2);
   osc2.start();
   osc2.freq(880);
+  osc2.amp(env2);
 
 osc3 = new p5.Oscillator();
  osc3.setType('sine');
-  osc3.amp(env3);
   osc3.start();
   osc3.freq(440);
+  osc3.amp(env3);
 
 osc4 = new p5.Oscillator();
  osc4.setType('sine');
-  osc4.amp(env4);
   osc4.start();
   osc4.freq(400);
+  osc4.amp(env4);
 
 env1 = new p5.Envelope();
   env1.setADSR(attackTime, decayTime, susPercent, releaseTime);
