@@ -127,6 +127,7 @@ function draw(){
 	filter4.res(resonance);
 
 	var resonance = mouseX*10;
+	console.log(resonance);
    
    for (var i = 0; i < numberOfBalls; i++) {
 
@@ -243,7 +244,7 @@ class Ball {
 			attackTime = map(length, 0, 250, 0, 3);
 			
 			cutoff2 = random(200, 400);
-			console.log( resonance);
+			
 		}
 		if(this.location.y <= this.radius){
 			env3.play();	
