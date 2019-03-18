@@ -26,7 +26,7 @@ var releaseTime = .2;
 var attackLevel = .5;
 var releaseLevel = 0;
 var length;
-var resonance = map(mouseX, 0, windowWidth, 50, 500);
+var resonance = mouseX*20;
 
 
 
