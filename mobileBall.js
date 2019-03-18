@@ -35,6 +35,8 @@ function draw(){
 
 	}
 
+	console.log(xacc);
+
 }
 
 
