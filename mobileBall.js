@@ -62,19 +62,19 @@ osc4 = new p5.Oscillator();
   osc4.start();
   osc4.freq(400);
 
-env1 = new p5.Envelope();
+env1 = new p5.Env();
   env1.setADSR(attackTime, decayTime, susPercent, releaseTime);
   env1.setRange(attackLevel, releaseLevel);
 
-env2= new p5.Envelope();
+env2= new p5.Env();
   env2.setADSR(attackTime, decayTime, susPercent, releaseTime);
   env2.setRange(attackLevel, releaseLevel);
 
-env3 = new p5.Envelope();
+env3 = new p5.Env();
   env3.setADSR(attackTime, decayTime, susPercent, releaseTime);
   env3.setRange(attackLevel, releaseLevel);
 
-env4 = new p5.Envelope();
+env4 = new p5.Env();
   env4.setADSR(attackTime, decayTime, susPercent, releaseTime);
   env4.setRange(attackLevel, releaseLevel);
 
