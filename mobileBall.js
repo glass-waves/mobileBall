@@ -102,6 +102,12 @@ class Ball {
            this.acceleration.y *= -.8;
 			}
 
+		function mouseDragged() {
+  		this.location = (mouseX, mouseY);
+  			// prevent default
+  			return false;
+}
+
 
 		//this.location.x.limit()	
 
