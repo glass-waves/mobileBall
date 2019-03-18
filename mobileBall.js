@@ -74,10 +74,10 @@ class Ball {
 
 
 		//var zacc = map(ztip, -180, 180, -1, 1);
-		var xacc = map(xtip, -180, 180, 1, -1);
-		var yacc = map(ytip, -90, 90, 1, -1);
+		var xacc = map(xtip, -90, 90, -1, 1);
+		var yacc = map(ytip, -90, 90, -1, 1);
 
-		this.acceleration = createVector(xacc,yacc);
+		this.acceleration = createVector(yacc,xacc);
 
 
 		//add acceleration to velocity vector
@@ -96,6 +96,9 @@ class Ball {
            this.velocity.y *= -.8;
            this.acceleration.y *= -.8;
 			}
+
+
+		this.location.x.limit()	
 
 		//this.acceleration.mult(0);
 
