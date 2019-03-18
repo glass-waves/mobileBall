@@ -26,7 +26,7 @@ var releaseTime = .2;
 var attackLevel = .5;
 var releaseLevel = 0;
 var length;
-var resonance = mouseX*20;
+var resonance;
 
 
 
@@ -125,6 +125,8 @@ function draw(){
 	filter2.res(resonance);
 	filter3.res(resonance);
 	filter4.res(resonance);
+
+	var resonance = mouseX*10;
    
    for (var i = 0; i < numberOfBalls; i++) {
 
