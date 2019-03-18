@@ -96,7 +96,7 @@ function draw(){
 
 }
 
-function touchStarted() {
+function mousePressed() {
 
   getAudioContext().resume()
 
