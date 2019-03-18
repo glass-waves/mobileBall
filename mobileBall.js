@@ -13,9 +13,9 @@ var env3
 var env4;
 var attackTime = .02;
 var decayTime = .1;
-var susPercent = .2;
-var releaseTime = 1;
-var attackLevel = 1;
+var susPercent = 0;
+var releaseTime = .2;
+var attackLevel = .5;
 var releaseLevel = 0;
 
 
