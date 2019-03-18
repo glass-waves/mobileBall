@@ -53,13 +53,13 @@ env4 = new p5.Envelope();
 
 
 osc1 = new p5.Oscillator();
- osc1.setType('square');
+ osc1.setType('tri');
   osc1.start();
   osc1.freq(116.54);
   osc1.amp(env1);
 
 osc2 = new p5.Oscillator();
- osc2.setType('saw');
+ osc2.setType('sawtooth');
   osc2.start();
   osc2.freq(146.83);
   osc2.amp(env2);
@@ -187,8 +187,13 @@ class Ball {
 
 	playSound() {
 
+		var length;
+
 		if(this.location.x <= this.radius){
-			env1.play();	
+			env1.play();
+			length = random(250);	
+			attackTime = map(length, 0, 250, 0, 1);
+			console.log(attackTime);
 		}
 		if(this.location.x >= windowWidth - this.radius){
 			env2.play();	
