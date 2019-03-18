@@ -1,0 +1,23 @@
+{
+  "name": "mobileball",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mobileBall.js",
+  "dependencies": {
+    "tone": "^13.4.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glass-waves/mobileBall.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glass-waves/mobileBall/issues"
+  },
+  "homepage": "https://github.com/glass-waves/mobileBall#readme"
+}
