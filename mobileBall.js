@@ -36,8 +36,7 @@ function draw(){
  	balls[i].update();
 
 	}
-console.log('xacc'+ xacc);
-console.log('yacc' + yacc);
+
 }
 
 
@@ -63,6 +62,8 @@ class Ball {
 		//translate(-windowWidth/2, -windowHeight/2);
 
 		ellipse(this.location.x, this.location.y, this.size, this.size);
+		console.log('xacc'+ xacc);
+		console.log('yacc' + yacc);
 		
 		 
 
